@@ -8,6 +8,7 @@
   Getting Started Next.js + Clerk Authentication
 </h3>
 ---
+
 ```sh
 git clone https://github.com/shiqocred/getting-started-clerk
 ```
