@@ -7,6 +7,7 @@
 <h3 align="center">
   Getting Started Next.js + Clerk Authentication
 </h3>
+
 ---
 
 ```sh
