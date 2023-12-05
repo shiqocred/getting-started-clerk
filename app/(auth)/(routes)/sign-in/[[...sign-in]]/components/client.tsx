@@ -8,6 +8,7 @@ import { Separator } from "@/components/ui/separator";
 import Link from "next/link";
 import FormInput from "@/components/form-input";
 import { Button } from "@/components/ui/button";
+import toast from "react-hot-toast";
 
 const Client = () => {
   const { isLoaded, signIn, setActive } = useSignIn();
@@ -28,15 +29,12 @@ const Client = () => {
       });
 
       if (result.status === "complete") {
-        console.log(result);
         await setActive({ session: result.createdSessionId });
         router.push("/");
-      } else {
-        /*Investigate why the login hasn't completed */
-        console.log(result);
+        toast.success("Sign In Succeded.");
       }
     } catch (err: any) {
-      console.error("error", err.errors[0].longMessage);
+      toast.error(err.errors[0].longMessage);
     }
   };
   return (

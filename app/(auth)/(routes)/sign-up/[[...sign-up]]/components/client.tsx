@@ -48,7 +48,6 @@ const Client = () => {
       setIsDisabled(true);
     } catch (err: any) {
       toast.error(err.errors[0].message);
-      console.log(JSON.stringify(err, null, 2));
     }
   };
 
@@ -63,9 +62,7 @@ const Client = () => {
       setSeconds(60);
       setTimerStarted(true);
       setIsDisabled(true);
-    } catch (err: any) {
-      console.log(JSON.stringify(err, null, 2));
-    }
+    } catch (err: any) {}
   };
 
   // This verifies the user using email code that is delivered.
